@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Produit - Votre Site Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 오버레이 섹션 -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- 헤더 섹션 -->
+    <header>
+        <button id="menuButton" class="menu-button">
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </button>
+        <a href="index.html"><img src="images/01_logo.png" alt="Logo" class="logo"></a>
+        <nav id="menu" class="menu">
+            <button id="closeButton" class="close-button">&times;</button>
+            <ul>
+                <li><a href="produit.html"><strong>Produits</strong></a>
+                    <ul>
+                        <li><a href="produit.html">Produits</a></li>
+                        <li><a href="#">Abonnement</a></li>
+                        <li><a href="#">Salon de thé</a></li>
+                        <li><a href="#">Goodies</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><strong>À propre</strong></a>
+                    <ul>
+                        <li><a href="#">Concept</a></li>
+                        <li><a href="#">Chefs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><strong>Aide</strong></a>
+                    <ul>
+                        <li><a href="#">Service client</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main>
+       <!-- 상단 이미지 (슬라이더 이미지의 절반 크기) -->
+       <div class="produit_main_image">
+           <img src="images/produit_moment_01.png" alt="Produit Image" class="produit_main_image">
+       </div>
+
+       <!-- Produit moment, Viennoiserie섹션 -->
+       <div class="container">
+           <!-- Produit_moment 섹션 -->
+           <div class="section">
+               <a href="produit_moment.html">
+                   <div class="content">
+                       <img src="images/produit_moment_02.png" alt="Produit_moment" class="produit_icon">
+                       <h2>Produit Moment</h2>
+                   </div>
+               </a>
+           </div>
+
+           <!-- Viennoiserie 섹션 -->
+           <div class="section">
+               <a href="produit_viennoiserie.html">
+                   <div class="content">
+                       <img src="images/produits_viennoiserie.png" alt="Viennoiserie" class="produit_icon">
+                       <h2>Viennoiserie</h2>
+                   </div>
+               </a>
+           </div>
+       </div>
+
+       <!-- Petit four, Café 섹션 -->
+       <div class="container">
+           <!-- Petit four 섹션 -->
+           <div class="section">
+               <a href="produit_petit_four.html">
+                   <div class="content">
+                       <img src="images/produits_petit_four.png" alt="Petit Four" class="produit_icon">
+                       <h2>Petit Four</h2>
+                   </div>
+               </a>
+           </div>
+
+       <!-- Café 섹션 -->
+       <div class="section">
+           <a href="produit_cafe.html">
+               <div class="content">
+                   <img src="images/produits_cafe.png" alt="Café" class="produit_icon">
+                   <h2>Café</h2>
+               </div>
+           </a>
+       </div>
+       </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer-section">
+            <h3>Amuser chez Éclart</h3>
+            <ul>
+                <li><a href="produit.html">Produits</a></li>
+                <li><a href="#">Abonnement</a></li>
+                <li><a href="#">Salon du thé</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+		<li><a href="contact_personelle.html">Personelle</a></li>
+                <li><a href="contact_career.html">Career</a></li>
+                <li><a href="contact_fournisseur.html">Fournisseur</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>À propre</h3>
+            <ul>
+                <li><a href="#">Notre concept</a></li>
+                <li><a href="#">Nos chefs</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Éclart Newsletter</h3>
+            <img src="images/mail.png" alt="Mail">
+        </div>
+        <div class="footer-logo">
+            <img src="images/Info.png" alt="Info">
+            <img src="images/slogan.png" alt="Slogan">
+        </div>
+    </footer>
+
+    <script>
+    const menuButton = document.getElementById('menuButton');
+    const closeButton = document.getElementById('closeButton');
+    const overlay = document.getElementById('overlay');
+    const menu = document.getElementById('menu');
+
+    menuButton.addEventListener('click', function() {
+        menu.classList.toggle('menu-open');
+        overlay.classList.toggle('overlay-visible');
+    });
+
+    closeButton.addEventListener('click', function() {
+        menu.classList.toggle('menu-open');
+        overlay.classList.toggle('overlay-visible');
+    });
+
+    overlay.addEventListener('click', function() {
+        menu.classList.remove('menu-open');
+        overlay.classList.remove('overlay-visible');
+    });
+    </script>
+</body>
+</html>
